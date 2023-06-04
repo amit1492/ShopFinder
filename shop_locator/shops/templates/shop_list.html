@@ -1,0 +1,7 @@
+<ul>
+    {% for shop in shops %}
+        <li>{{ shop.name }}</li>
+    {% empty %}
+        <li>No shops found within the specified distance.</li>
+    {% endfor %}
+</ul>

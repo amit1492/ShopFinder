@@ -1,0 +1,15 @@
+<!-- templates/shop_list2.html -->
+<h1>Shop List</h1>
+<ul>
+    {% for shop in shops %}
+        <li><a href="{% url 'shop_detail' shop.pk %}">{{ shop.name }}</a></li>
+    {% empty %}
+        <li>No shops found.</li>
+    {% endfor %}
+</ul>
+<ul>
+<a href="{% url 'shop_create' %}">Create a new shop</a>
+</ul>
+<ul>
+<a href="{% url 'shop_list1' %}">Find Near me</a>
+</ul>
